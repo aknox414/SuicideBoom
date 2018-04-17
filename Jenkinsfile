@@ -1,7 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'maven:3.5.2-jdk-9'
+      image 'golang:1.10.1-alpine'
+      label 'docker-cloud'
     }
     
   }
