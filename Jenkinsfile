@@ -1,3 +1,4 @@
+library 'SharedLibs'
 pipeline {
   agent any
   stages {
@@ -6,6 +7,11 @@ pipeline {
         echo "Hello ${My_NAME}!"
       }
     }
+     stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }
   }
   environment {
     My_NAME = 'MARY'
