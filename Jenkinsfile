@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       options {
-        timeout(time: 1, unit: 'SECONDS')
+        timeout(time: 20, unit: 'SECONDS')
       }
       input {
         message 'Which Version?'
@@ -20,7 +20,7 @@ v1.3''', description: 'What to deploy?')
         }
       }
       steps {
-        echo 'Continuing with deployment'
+        echo "Deploying ${APP_VERSION}."
       }
     }
   }
