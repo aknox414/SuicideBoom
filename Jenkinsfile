@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('SimplePipeline') {
+    stage('Say Hello') {
       steps {
-        checkpoint 'SimplePipeline'
+        echo 'Hello World!'
       }
     }
   }
